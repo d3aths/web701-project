@@ -1,3 +1,7 @@
+# Milestone 1
+
+## Reqs
+
 Produce a website design and project plan in a report written for your client:
 
 1. Use a tool such as Microsoft DevOps to manage and present features in an Epic with a backlog list of features from a list of User Stories based on the website requirements. (20 marks) 
@@ -19,4 +23,4 @@ b) Include mapping of the User Stories to a CRUD analysis to design the database
 
 ![image](https://user-images.githubusercontent.com/16113944/158004141-68b053a6-8968-4602-9b0a-3805b0751441.png)
 
-<sub>Notes: this is a draft of first thoughts about what features are needed and will most likely not reflect the final features that get implemented as the project is brought to life</sub>
+<sub>Notes: this is a draft of first thoughts about what features are needed and may not reflect the final features that get implemented as the project is brought to life</sub>
