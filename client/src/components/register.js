@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function Register() {
-    const [form, setForm = useState({
+    const [form, setForm] = useState({
         name: "",
         email: "",
         phone: "",
-    })]
+    })
     const navigate = useNavigate();
-}
+
 // These methods will update the state properties.
 function updateForm(value) {
     return setForm((prev) => {
@@ -40,9 +40,9 @@ function updateForm(value) {
   }
 
   // This following section will display the form that takes the input from the user.
- return (
+  return (
     <div>
-      <h3>Register New Member</h3>
+      <h3>New member form</h3>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -74,7 +74,14 @@ function updateForm(value) {
             onChange={(e) => updateForm({ phone: e.target.value })}
           />
         </div>
+        <div className="form-group">
+         <input
+           type="submit"
+           value="Register"
+           className="btn btn-primary"
+         />
+       </div>
       </form>
     </div>
   );
- }
+}

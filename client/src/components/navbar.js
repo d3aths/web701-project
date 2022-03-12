@@ -1,6 +1,4 @@
 import React from "react";
- 
-// We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
  
 // We import NavLink to utilize the react router.
@@ -31,6 +29,11 @@ export default function Navbar() {
            <li className="nav-item">
              <NavLink className="nav-link" to="/register">
                Register with us
+             </NavLink>
+           </li>
+           <li className="nav-item">
+             <NavLink className="nav-link" to="/login">
+               Login
              </NavLink>
            </li>
          </ul>
