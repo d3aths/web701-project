@@ -103,9 +103,8 @@ serviceRoutes.route("/services/edit/:id").post(function (req, response) {
       .updateOne(myquery, newvalues, function (err, res) {
       if (err) throw err
       //unsure if adding this here could create a transaction in the same go??
-      //idk how to write it yet either
-      //comment below line out to be able to run this post successfully
-      .collection("transactions").insertOne({user.name}, {service.title})
+      //idk how to write it yet either. commented out because it fails to compile
+      //.collection("transactions").insertOne({user.name}, {service.title})
       console.log("signed up for service")
       response.json(res)
     })

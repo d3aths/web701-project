@@ -5,7 +5,9 @@ export default function Register() {
     const [form, setForm] = useState({
         name: "",
         email: "",
-        phone: "",
+        type: "",
+        password: "",
+
     })
     const navigate = useNavigate();
 
@@ -23,7 +25,7 @@ function updateForm(value) {
     // When a post request is sent to the register url, we'll add a new record to the database.
     const newPerson = { ...form };
   
-    await fetch("http://localhost:5000/record/add", {
+    await fetch("http://localhost:5000/user/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +37,7 @@ function updateForm(value) {
       return;
     });
   
-    setForm({ name: "", email: "", phone: "" });
+    setForm({ name: "", email: "", type: "", password: "" });
     navigate("/")
   }
 
@@ -45,7 +47,7 @@ function updateForm(value) {
       <h3>New member form</h3>
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Full Name</label>
           <input
             type="text"
             className="form-control"
@@ -65,15 +67,43 @@ function updateForm(value) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Phone Number</label>
+          <label htmlFor="password">Password</label>
           <input
-            type="int"
+            type="text"
             className="form-control"
-            id="phone"
-            value={form.phone}
-            onChange={(e) => updateForm({ phone: e.target.value })}
+            id="password"
+            value={form.password}
+            onChange={(e) => updateForm({ password: e.target.value })}
           />
         </div>
+        <div className="form-check form-check-inline">
+          <label htmlFor="typeProvider">
+            <input
+              type="radio"
+              name="typeOptions"
+              classname="form-check-input"
+              id="typeProvider"
+              value="Provider"
+              checked={form.type === "Provider"}
+              onChange={(e) => updateForm({ type: e.target.value })}
+            />
+            Provider
+          </label>
+        </div>
+        <div className="form-check form-check-inline">
+          <label htmlFor="typeMember">
+            <input
+              type="radio"
+              name="typeOptions"
+              classname="form-check-input"
+              id="typeMember"
+              value="Member"
+              checked={form.type === "Member"}
+              onChange={(e) => updateForm({ type: e.target.value })}
+            />
+            Member
+          </label>
+          </div>
         <div className="form-group">
          <input
            type="submit"
