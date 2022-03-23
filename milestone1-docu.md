@@ -24,3 +24,7 @@ b) Include mapping of the User Stories to a CRUD analysis to design the database
 ![image](https://user-images.githubusercontent.com/16113944/158004141-68b053a6-8968-4602-9b0a-3805b0751441.png)
 
 <sub>Notes: this is a draft of first thoughts about what features are needed and may not reflect the final features that get implemented as the project is brought to life</sub>
+
+![image](https://user-images.githubusercontent.com/16113944/159631159-c81b7c4f-2a36-479b-9f69-34d6d5fd545b.png)
+
+Revision of CRUD table according to workable api elements
