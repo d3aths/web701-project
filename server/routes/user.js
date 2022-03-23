@@ -11,9 +11,13 @@ const dbo = require("../db/connection");
 // This help convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
 
+// A lot of these commands are admin-only functions
+// refactoring will have to take place in M2 using schemas rather than modelling users on the forms
+// booleans must be in place such as isAdmin, isProvider to mark accounts for having access to functions
+// easier to use for authentication and page access
 
 // This section will help you get a list of all the users.
-userRoutes.route("/user").get(function (req, res) {
+userRoutes.route("/userlist").get(function (req, res) {
   let db_connect = dbo.getDb("web7");
   db_connect
     .collection("users")
@@ -38,7 +42,6 @@ userRoutes.route("/user/:id").get(function (req, res) {
 
 // This section will help you create a new user.
 userRoutes.route("/user/add").post(function (req, response) {
-    console.log(req.body)
   let db_connect = dbo.getDb();
   let myobj = {
     email: req.body.email,
@@ -53,7 +56,7 @@ userRoutes.route("/user/add").post(function (req, response) {
 });
 
 // This section will help you update a user by id.
-userRoutes.route("/update/:id").post(function (req, response) {
+userRoutes.route("/user/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -73,7 +76,7 @@ userRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a user
-userRoutes.route("/:id").delete((req, response) => {
+userRoutes.route("/rmvuser/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("users").deleteOne(myquery, function (err, obj) {
@@ -82,5 +85,27 @@ userRoutes.route("/:id").delete((req, response) => {
     response.json(obj);
   });
 });
+
+//logging in with authentication -jwt and bcrypt needs to be installed and set up later for this
+//not operational right now
+userRoutes.route("/login").post(function (req, res) {
+  const { email, password } = req.body
+  const user = db_connect
+    .collection("users")
+    .findOne({ email })
+
+      if (user && (user.matchPassword(password))) {
+          res.json({
+          _id: user._id,
+          name: user.name,
+          email: user.email,
+          type: user.type,
+          token: generateToken(user._id),
+          })
+      } else {
+          res.status(401)
+          throw new Error('Invalid email or password')
+      }
+})
 
 module.exports = userRoutes;
