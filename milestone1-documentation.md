@@ -121,9 +121,3 @@ Revision according to workable api elements
 ### 2. Submit an Information Architecture analysis report that meets the requirements. This should atleast include the documents and topic headings listed in Additional Guidelines section in Appendix 1. See the marking guide provided in Appendix 1.
   
 [**Report located here**](https://github.com/d3aths/web701-project/blob/master/info-analysis-report.md)
-
----
-  
-## Wireframes
-  
-Mockup of the website design, how it may look (first draft)
