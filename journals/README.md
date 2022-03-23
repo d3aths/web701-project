@@ -1,4 +1,4 @@
-# Project Journals
+# Milestone Reviews
 
 I've chosen to use a software called jrnl to keep a record of my thoughts and learning process for this course.  
 It's a lot easier than using the website i've kept for the previous years of work. Because of the effort involved in going to the site and then making a post about stuff everytime, it was never at the front of my mind and i'd always forget to do it.  
