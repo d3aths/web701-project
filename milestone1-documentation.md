@@ -122,6 +122,7 @@ Revision according to workable api elements
   
 [**Report located here**](https://github.com/d3aths/web701-project/blob/master/info-analysis-report.md)
 
+---
   
 ## Wireframes
   
