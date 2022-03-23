@@ -152,5 +152,21 @@ Relating visual elements of the site to other things. I have not worked on any v
 
 
 ## Visual Design
-### Layout grids
-### Design Sketches and Page Mock ups
+
+I have put together a quick simple wireframes for the website. These were made before writing this report, which has expanded on my views for what I want from the site. So while I may incorporate some of the wireframe elements in the final design, this is very likely to change as the site is developed.
+
+#### Homepage
+
+![image](https://user-images.githubusercontent.com/16113944/159799162-efe02d22-f7c4-4b20-856d-59e69d475fa3.png)
+
+#### Search/Browse Services
+
+![image](https://user-images.githubusercontent.com/16113944/159799433-2a9d1725-61f1-4770-a38e-930a45e7cd75.png)
+
+#### Login and register forms
+
+![image](https://user-images.githubusercontent.com/16113944/159799525-2c9f4c4f-fb6c-4a8e-9f24-d134cf377903.png)
+
+#### Account Portal
+
+![image](https://user-images.githubusercontent.com/16113944/159799590-ec838fcf-784e-452b-806f-5587c1ba0f61.png)
