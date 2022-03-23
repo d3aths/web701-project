@@ -153,7 +153,7 @@ Relating visual elements of the site to other things. I have not worked on any v
 
 ## Visual Design
 
-I have put together a quick simple wireframes for the website. These were made before writing this report, which has expanded on my views for what I want from the site. So while I may incorporate some of the wireframe elements in the final design, this is very likely to change as the site is developed.
+I have put together a quick simple wireframes for the website. These were made before writing this report, which has expanded on my views for what I want from the site. So while I may incorporate some of the wireframe elements in the final design, this is very likely to change as the site is developed. I'm not sure why, but on Windows where I made these files as Adobe XD artboards, the background colour was a darkish grey, and appeared so when I took these screenshots, but in Linux where I'm now working from, the pictures have a blue background??
 
 #### Homepage
 
