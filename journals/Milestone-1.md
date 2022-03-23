@@ -1,0 +1,20 @@
+# M1 Entries
+
+**[2022-02-21 16:45]** thinking about the basis for my website. will be nice doing something completely different from online stores which we have always done in previous years classes
+
+**[2022-03-12 13:44]** its clear that by just trying to make new pages with react that ill need to do a lot of learning in regards to how exactly to make div elements like sit in certain places on the page, making columns and containers for parts of the site and all that. its so easy in plain css/html but react is an entirely different beast. i know it like goes on about how its supposed to be easy and all that but even from a background that knows how to do web design, this is hard to pick up. theres a lot of complicated parts of the project. its like combining programming with web design i guess and over the past few years i've come to get really done with coding on account of how frustrated its made me.
+
+**[2022-03-12 15:45]** the token system confuses me a little.
+not really sure how exactly that will work right now. so its difficult to develop te crud matrix without really going far into what that feature would behave like, and also whats possible to make it do within the realm of my knowledge about implementing it.
+
+**[2022-03-23 12:44]** i havent really done too much work on this in my spare time but rather pushing through it during class and a little bit after.
+its really still kinda hard to wrap my head around what an api actually *is* for some reason. like the term is used so often to do with web related things that it seems so vague to me. my understanding of what the api is within my project here is that its something that maps out the paths of the website, ie URLs, and sends information to and from the database by interacting with stuff on the different web pages. so basically like the gears that make the website and database do stuff and interact with each other?
+
+**[2022-03-23 12:46]** anyway ive been using the code from this tutorial i found online but its related to a different thing so obvs ive had to change it a bit for my use.  
+its working so far which is honestly a miracle considering my track record with trying to use code ive found online to make it work. i havent tested all the functions yet but adding a user works as a start so that looks promising for the rest of it. im still kinda unclear on how it actually links up with the elements of the website, but that was always the case that i never really understood it properly, just accepted that oh okay this works now. so after ensuring this works all correctly the only thing id have left to do is the info report which looks like a giant assssssss theres so much information and sections i have to cover. nightmarish. theres nothing i cannot stand more than business fluffery.
+
+**[2022-03-24 10:45]** in developing the API ive realized that i need a lot more functionality from the way my database architecture is structured.
+it was originally developed using a tutorial for a little one page database that displayed a list of people on a page and did nothing else but edit add delete. im going to need a lot more interactivity with my db schemas than that, so will have to eventually refactor the way its written completely. i have some other examples from previous work that i can use and shape it to my requirements for this project, but it is still going to a be a big mission to undertake.
+
+**[2022-03-24 10:48]** oops didnt meant to save that entry just yet.
+i think the importance of this is that when looking at tutorials, instead of going along with it just to get something working, you need to look ahead and find one that is flexible for expanding and reuse. but also at the time i had like zero understanding of react like even now i kinda know a bit more after making the api stuff, its still really complex in my head. but yeah its difficult to look at and see what exactly its all doing. anyway thats all my entries for this milestone
