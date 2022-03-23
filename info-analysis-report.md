@@ -148,13 +148,7 @@ Relating visual elements of the site to other things. I have not worked on any v
 
 ### Architectural Blue prints
 
-#### A graphical diagrammatic map of the site, that includes navigation links, e.g. a Visual representation of the site’s structure
-
-### Define navigation
-
-#### Global Navigation
-
-#### Local Navigation
+![image](https://user-images.githubusercontent.com/16113944/159794007-615a59f7-0d87-431c-89e8-984d1523d4e6.png)
 
 
 ## Visual Design
