@@ -17,6 +17,7 @@ Work items that have not been completed
 ![image](https://user-images.githubusercontent.com/16113944/159633074-e79da89d-3508-4879-8ba7-bb0faefe29fb.png)  
 Backlog
 
+---
 
 #### a) For User stories, features and backlog list.
 
@@ -40,6 +41,7 @@ features:
 
 notes: the above system nullifies the point in the brief where providers have an interface to accept tokens as part of a transaction. an alternative could be that each member gets a set amount of tokens when registering that they can spend. the tokens must then be linked to each persons account, and the page for the service should then have a special interface that the provider can see which shows all the people's tokens and profiles (to verify) who want to sign up for their service, and be able to accept/reject them.
 
+---
 
 #### b) Include mapping of the User Stories to a CRUD analysis to design the database API for the application. Write API calls to implement CRUD in Express.js –note the API calls can be stubs –but are best if they produce code behaviour. Test the API using a tool such as POSTMAN.
 
@@ -114,7 +116,7 @@ I reworked the CRUD matrix after completing the basic API commands that I though
 
 Revision according to workable api elements
 
-
+---
 
 ### 2. Submit an Information Architecture analysis report that meets the requirements. This should atleast include the documents and topic headings listed in Additional Guidelines section in Appendix 1. See the marking guide provided in Appendix 1.
   
