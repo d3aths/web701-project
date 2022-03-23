@@ -152,8 +152,6 @@ Relating visual elements of the site to other things. I have not worked on any v
 
 
 ## Visual Design
-### Layout grids
-### Design Sketches and Page Mock ups
 
 I have put together a quick simple wireframes for the website. These were made before writing this report, which has expanded on my views for what I want from the site. So while I may incorporate some of the wireframe elements in the final design, this is very likely to change as the site is developed.
 
