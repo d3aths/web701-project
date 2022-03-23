@@ -98,28 +98,53 @@ This group is a no-kill shelter for animals. There is a bit of controversy surro
 
 ---
 
-
+All these websites I found to have useful information on them, and their layout was easy to navigate with appropriate places to call to action buttons, which is the foundation of any chairity, for people to easily help out. What I thought was the best feature that a couple of these sites shared was a little field for their stats, showing the numbers of their impact. This really makes the users stop and think "wow this charity is really making a difference, I want to get involved too". Charities like the Rotary Club are more focused on local communities and what they can do to change things their. A lot of them in New Zealand do things like build playgrounds or public areas, and volunteer work as well as things like youth programs. This would be more similar to what my charity is doing. Something they all had in common was showing striking photos and imagery of what their group was focused on, so you can see they're out there in real life making a difference to real people and animals.
 
 ## Site Content
 
 ### Identify Content and Functional Requirements
 
-### Group and Label Content
+My website's content will be a mission statement to straight away inform visitors of our goals. I'd like to copy some of the example websites and next put some like figures of our impact, or maybe something like showing a member count, which enforces the idea that the charity is a community people love getting involved with. Site should have a nav at the top with main links that may or may not stay fixed as you scroll, and a little logo picture with the name of the charity on it.
+
+Following that with a section that shows people how they can help, with simple imagery and some examples of what they could do if they register with us as a provider of a service. My charity is slightly different in the fact that we won't require monetary donations, rather a donation of resources and people, as our charity is focused on skills and learning and having a community. In that section would be a link to register that takes you to the sign up page, where you can start browsing our current services or start your own. 
+
+Next section would be featuring some example services of what a member will sign up to receive. This could be in the form of an animated carousel, meant to inspire people into joining us. This will have a register link as well.
+
+There should then be a section with some image that takes a user to browse all our services which they can do without signing up.
+Lastly a footer section with maybe some contact info or a newsletter signup box
 
 
 ## Site Structure
 
-#### Metaphor Exploration
+### Metaphor Exploration
 
 #### Organizational metaphors
 
+A comparison that defines the the aspects of the charity and what methods we operate by. These are like the values of the company and attitude that it has towards people. Most charities I would say are the same in this regard. The methods that charities use are people as a resource, either for their ability to donate, volunteer, get involved. We do not differ from the rest here.
+
 #### Functional metaphors
+
+Functional metaphors. Tasks that are similar that our users do. Our website is like a food bank out in the real world. But instead of being allocated an allowance of food, our members get an allowance for participating in activities, workshops, courses, and seminars. This almost functions like a polytech institute, but instead of professors we have members of the public who want to help out and build something together.
 
 #### Visual metaphors
 
+Relating visual elements of the site to other things. I have not worked on any visual elements of the website yet and have not had the time to give thought to what I could do, other than creating a logo. Given the basis of the website is to organize and skill up to fight and inform ourselves about an oppressive regime, I think pseudo military style graphics could be ideal. But we also don't want to give off an impression of violence. Could use recruitment drive style website as inspiration when the time comes to build the front end, and maybe things related disease, science, plagues, etc. It should be similar to other charity websites so when people arrive they recognize it as following stndard design patterns.
+
 ### Site Structure listing
 
-#### Hierarchical map of the site, called the “site structure listing.” Text based
+- Homepage
+    - Mission Statement
+    - Impact figures
+    - Become a provider
+    - Become a member
+    - Browse services
+
+- About
+    - Extended mission statement
+
+- Login
+
+- Register
 
 ### Architectural Blue prints
 
