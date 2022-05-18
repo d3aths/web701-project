@@ -1,20 +1,45 @@
-const express = require("express");
+import express from 'express'
+import path from 'path'
 const app = express();
-const cors = require("cors");
-require("dotenv").config({ path: "./config.env" });
-const port = process.env.PORT || 5000;
+import cors from 'cors'
+import dotenv from 'dotenv'
+dotenv.config({ path: "./config.env" });
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/user"));
-app.use(require("./routes/service"));
+
+import serviceRoutes from './routes/service.js'
+import userRoutes from './routes/user.js'
+import uploadRoutes from './routes/uploadRoutes.js'
+
+app.use("/api/users", userRoutes);
+app.use("/api/services", serviceRoutes);
+app.use('/api/upload', uploadRoutes);
+
 // get driver connection
-const dbo = require("./db/connection");
+import connectDB from './db/connection.js';
+dotenv.config()
+connectDB()
+
+const __dirname = path.resolve()
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  )
+} else {
+  app.get('/', (req, res) => {
+    res.send('API is running....')
+  })
+}
  
-app.listen(port, () => {
-  // perform a database connection when server starts
-  dbo.connectToServer(function (err) {
-    if (err) console.error(err);
- 
-  });
-  console.log(`Server is running on port: ${port}`);
-});
+const PORT = process.env.PORT || 5000
+
+app.listen(
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`
+  )
+)
