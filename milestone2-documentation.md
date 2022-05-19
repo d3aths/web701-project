@@ -2,19 +2,20 @@
 
 ## Report of web frameworks
 
-Describes the purpose of web frameworks and identifies common framework features and
-indicates those used in this website development scenario (15 marks)
+Web Application Framework or simply “web framework” is a software framework that is designed to support the development of web applications including web services, web resources, and web APIs. Frameworks are, in short, libraries that help you develop your application faster and smarter. (GeeksforGeeks, 2020).
+To expand on that in other words, a web framework is a skeleton structure that you can install in your code editor, that comes with everything premade that you need to get a functional website up and running in minutes. You can easily create your own pages and routing structure, and easily integrate the backend of your choice to your project. This is almost a necessity when creating a website, as you don't have to spend hours making everything from scratch and dealing with possible errors in your code, cause with a framework it's all already there for you to expand upon.
 
-- Has a formal definition of the purpose of web frameworks, describes common web framework features, describes those that are used in this website.
+Some features of frameworks are security, efficiency, free of cost, support documentation. The larger the community around the framework, the easier it will be for you to get support, tutorials, keep your code and website secure as vulnerabilities will be identified and patched quickly, and of course frameworks are open source so they're not locked behind any kind of costs. Frameworks offer a clean organisation system for the functionality of the website.
+
+In this project I use Angular and React's components, file creation structure, authentication services (such as logging in/registering/roles). In the MERN stack i'm using bootstrap for CSS framework, and also the Redux library for state management.
 
 ## Work Grid
 
-
 #### Notes on test accounts
 
-login with admin@no.com pass "no" for admin access  
-login with prov@no.com pass "no" for provider access (though currently its no different than registering any new user)  
-or create new account yourself  
+- login with admin@no.com pass "no" for admin access  
+- login with prov@no.com pass "no" for provider access (though currently its no different than registering any new user)  
+- OR create new account yourself  
 
 Create a Work Grid to evaluate two web framework systems you propose for use on the project.  
 Each framework is to be evaluated as described in the following. Include screenshots that demonstrate prototype solutions that meet website requirements. (40 marks)
@@ -41,8 +42,19 @@ beneficiaries use the system to acquire tokens (30 marks)
 - The system provides an interface that the members can use to accept a token in a
 transaction , and store and retrieve data from a server-side database (API)
 
+| Req | MEAN | MERN | Comparison | 
+|--|--|--|--|
+| Register, Login | string |
+| Administer own account | string |
+| Store and retrieve data from server | int |
+| User roles have access levels |
+
 ## Conclusion
 
 Conclude the report with a recommendation of a web framework to use in the development of this website. That will be the framework you will use for developing your website. (15 marks)
 
 - Identifies pros and cons of each framework. Justifies the selection of one over another in this context. Identifies the framework that will be used in the project (APA7)
+
+## References
+
+GeeksforGeeks. (2020, June 5). *Top 10 Frameworks for Web Applications.* Retrieved May 19, 2022, from https://www.geeksforgeeks.org/top-10-frameworks-for-web-applications/?ref=gcse
