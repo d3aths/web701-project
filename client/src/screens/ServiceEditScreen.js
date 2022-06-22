@@ -174,7 +174,6 @@ const ServiceEditScreen = ({ match, history }) => {
               Update
             </Button>
           </Form>
-        )}
       </FormContainer>
     </>
   )

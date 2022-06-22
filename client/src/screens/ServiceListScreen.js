@@ -41,7 +41,7 @@ const ServiceListScreen = ({ history, match }) => {
   useEffect(() => {
     dispatch({ type: SERVICE_CREATE_RESET })
 
-    if (!userInfo || !userInfo.isAdmin) {
+    if (!userInfo || !userInfo.isAdmin || !userInfo.isProvider) {
       history.push('/login')
     }
 
