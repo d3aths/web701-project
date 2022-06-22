@@ -18,6 +18,10 @@ Password: admin
 
 One specific thing that happens that I can't figure out is that going into individual service pages from the home screen, won't display their details unless you go into a service from the service list page (under admin options), then clicking edit on the service from the table, then going back without changing information. Only then for some reason will the individual info display (and only for the item you edited). I have no idea what is causing this and why it won't just damn well display properly.
 
+### M3 Essay
+
+https://github.com/d3aths/web701-project/blob/master/New%20tech%20essay.docx
+
 ### To - do bug fixes
 
 - [x]  make provider fields on table in user list
