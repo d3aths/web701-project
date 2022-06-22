@@ -20,18 +20,18 @@ One specific thing that happens that I can't figure out is that going into indiv
 
 ### To - do bug fixes
 
-- [ x ] make provider fields on table in user list
+- [x]  make provider fields on table in user list
 
-- [ x ] edit service page has infinite loader, must be corrupted item on page
+- [x] edit service page has infinite loader, must be corrupted item on page
 
 - [ ] services do not display information correctly. look into backend
 
-- [ x ] creating service gui button fails with request 401
+- [x] creating service gui button fails with request 401
 
 - [ ] admin order page shows 404. must be revamped into transactions payable with token out of the users balance
 
-- [ x ] need correct labels on the services list table
+- [x] need correct labels on the services list table
 
-- [ x ] code 500 on homepage, i believe this should be a rotating list. look at what backend is trying to get here
+- [x] code 500 on homepage, i believe this should be a rotating list. look at what backend is trying to get here. the functionality for the carousel is not implemented
 
-- [ x ] provider type account should have access to services list to create. reevaluate authentication for those api points
+- [x] provider type account should have access to services list to create. reevaluate authentication for those api points
