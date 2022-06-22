@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
-import Rating from '../components/Rating'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Meta from '../components/Meta'
-import {
-  listServiceDetails,
-} from '../actions/serviceActions'
+
 
 const ServiceScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
@@ -17,9 +14,6 @@ const ServiceScreen = ({ history, match }) => {
 
   const serviceDetails = useSelector((state) => state.serviceDetails)
   const { loading, error, service } = serviceDetails
-
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
 
   return (
     <>
@@ -32,15 +26,15 @@ const ServiceScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
-          <Meta title={service.name} />
+          <Meta title={service.title} />
           <Row>
             <Col md={6}>
-              <Image src={service.image} alt={service.name} fluid />
+              <Image src={service.image} alt={service.title} fluid />
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
                 <ListGroup.Item>
-                  <h3>{service.name}</h3>
+                  <h3>{service.title}</h3>
                 </ListGroup.Item>
                 <ListGroup.Item>Date: {service.date}</ListGroup.Item>
                 <ListGroup.Item>
@@ -64,12 +58,12 @@ const ServiceScreen = ({ history, match }) => {
                     <Row>
                       <Col>Status:</Col>
                       <Col>
-                        {service.countInStock > 0 ? 'Places Left' : 'No spots'}
+                        {service.availableTokens > 0 ? 'Places Left' : 'No spots'}
                       </Col>
                     </Row>
                   </ListGroup.Item>
 
-                  {service.countInStock > 0 && (
+                  {service.availableTokens > 0 && (
                     <ListGroup.Item>
                       <Row>
                         <Col>Qty</Col>
@@ -79,7 +73,7 @@ const ServiceScreen = ({ history, match }) => {
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
                           >
-                            {[...Array(service.countInStock).keys()].map(
+                            {[...Array(service.availableTokens).keys()].map(
                               (x) => (
                                 <option key={x + 1} value={x + 1}>
                                   {x + 1}
@@ -92,16 +86,16 @@ const ServiceScreen = ({ history, match }) => {
                     </ListGroup.Item>
                   )}
 
-                  {/* <ListGroup.Item>
+                  <ListGroup.Item>
                     <Button
-                      onClick={addToCartHandler}
+                      onClick=''
                       className='btn-block'
                       type='button'
                       disabled={service.countInStock === 0}
                     >
-                      Add To Cart
+                      Sign up for Service
                     </Button>
-                  </ListGroup.Item> */}
+                  </ListGroup.Item>
                 </ListGroup>
               </Card>
             </Col>

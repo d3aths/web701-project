@@ -25,10 +25,10 @@ const ServiceCarousel = () => {
       {services.map((service) => (
         <Carousel.Item key={service._id}>
           <Link to={`/service/${service._id}`}>
-            <Image src={service.image} alt={service.name} fluid />
+            <Image src={service.image} alt={service.title} fluid />
             <Carousel.Caption className='carousel-caption'>
               <h2>
-                {service.name} ({service.date})
+                {service.title} ({service.date})
               </h2>
             </Carousel.Caption>
           </Link>

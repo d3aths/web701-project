@@ -96,10 +96,10 @@ const ServiceListScreen = ({ history, match }) => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
+                <th>TITLE</th>
+                <th>TOKENS</th>
                 <th>CATEGORY</th>
-                <th>BRAND</th>
+                <th>DATE</th>
                 <th></th>
               </tr>
             </thead>
@@ -107,10 +107,10 @@ const ServiceListScreen = ({ history, match }) => {
               {services.map((service) => (
                 <tr key={service._id}>
                   <td>{service._id}</td>
-                  <td>{service.name}</td>
-                  <td>${service.price}</td>
+                  <td>{service.title}</td>
+                  <td>{service.availableTokens}</td>
                   <td>{service.category}</td>
-                  <td>{service.brand}</td>
+                  <td>{service.date}</td>
                   <td>
                     <LinkContainer to={`/admin/service/${service._id}/edit`}>
                       <Button variant='light' className='btn-sm'>

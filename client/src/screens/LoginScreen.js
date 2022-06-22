@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
+//react and redux hooks that handles any validation and errors
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -23,12 +24,13 @@ const LoginScreen = ({ location, history }) => {
       history.push(redirect)
     }
   }, [history, userInfo, redirect])
-
+//login function is not managed by this page but is imported from the user actions module
+//gets called here
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
   }
-
+//form controls for entering user information
   return (
     <FormContainer>
       <h1>Sign In</h1>

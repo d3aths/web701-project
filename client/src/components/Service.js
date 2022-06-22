@@ -12,16 +12,13 @@ const Service = ({ service }) => {
       <Card.Body>
         <Link to={`/service/${service._id}`}>
           <Card.Title as='div'>
-            <strong>{service.name}</strong>
+            <strong>{service.title}</strong>
           </Card.Title>
         </Link>
 
-        {/* <Card.Text as='div'>
-          <Rating
-            value={service.rating}
-            text={`${service.numReviews} reviews`}
-          />
-        </Card.Text> */}
+        <Card.Text as='div'>
+          {service.details}
+        </Card.Text>
 
         <Card.Text as='h3'>{service.date}</Card.Text>
       </Card.Body>

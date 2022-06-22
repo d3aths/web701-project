@@ -12,13 +12,12 @@ import { SERVICE_UPDATE_RESET } from '../constants/serviceConstants'
 const ServiceEditScreen = ({ match, history }) => {
   const serviceId = match.params.id
 
-  const [name, setName] = useState('')
-  const [price, setPrice] = useState(0)
+  const [title, setTitle] = useState('')
+  const [availableTokens, setTokens] = useState(0)
   const [image, setImage] = useState('')
-  const [brand, setBrand] = useState('')
+  const [date, setDate] = useState('')
   const [category, setCategory] = useState('')
-  const [countInStock, setCountInStock] = useState(0)
-  const [description, setDescription] = useState('')
+  const [details, setDetails] = useState('')
   const [uploading, setUploading] = useState(false)
 
   const dispatch = useDispatch()
@@ -41,13 +40,12 @@ const ServiceEditScreen = ({ match, history }) => {
       if (!service.name || service._id !== serviceId) {
         dispatch(listServiceDetails(serviceId))
       } else {
-        setName(service.name)
-        setPrice(service.price)
+        setTitle(service.title)
+        setTokens(service.availableTokens)
         setImage(service.image)
-        setBrand(service.brand)
+        setDate(service.date)
         setCategory(service.category)
-        setCountInStock(service.countInStock)
-        setDescription(service.description)
+        setDetails(service.details)
       }
     }
   }, [dispatch, history, serviceId, service, successUpdate])
@@ -80,13 +78,12 @@ const ServiceEditScreen = ({ match, history }) => {
     dispatch(
       updateService({
         _id: serviceId,
-        name,
-        price,
+        title,
+        availableTokens,
         image,
-        brand,
+        date,
         category,
-        description,
-        countInStock,
+        details,
       })
     )
   }
@@ -98,31 +95,31 @@ const ServiceEditScreen = ({ match, history }) => {
       </Link>
       <FormContainer>
         <h1>Edit Service</h1>
-        {loadingUpdate && <Loader />}
+        {/* {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
           <Loader />
         ) : error ? (
           <Message variant='danger'>{error}</Message>
-        ) : (
+        ) : ( */}
           <Form onSubmit={submitHandler}>
-            <Form.Group controlId='name'>
-              <Form.Label>Name</Form.Label>
+            <Form.Group controlId='title'>
+              <Form.Label>Title</Form.Label>
               <Form.Control
-                type='name'
-                placeholder='Enter name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                type='title'
+                placeholder='Enter title'
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='price'>
-              <Form.Label>Price</Form.Label>
+            <Form.Group controlId='tokens'>
+              <Form.Label>Tokens</Form.Label>
               <Form.Control
                 type='number'
-                placeholder='Enter price'
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
+                placeholder='Enter available tokens'
+                value={availableTokens}
+                onChange={(e) => setTokens(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
@@ -143,23 +140,13 @@ const ServiceEditScreen = ({ match, history }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
+            <Form.Group controlId='date'>
+              <Form.Label>Date</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Enter brand'
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
-            <Form.Group controlId='countInStock'>
-              <Form.Label>Count In Stock</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='Enter countInStock'
-                value={countInStock}
-                onChange={(e) => setCountInStock(e.target.value)}
+                placeholder='Enter date of service'
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
@@ -173,13 +160,13 @@ const ServiceEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='description'>
-              <Form.Label>Description</Form.Label>
+            <Form.Group controlId='details'>
+              <Form.Label>Details</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Enter description'
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                placeholder='Enter details'
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
               ></Form.Control>
             </Form.Group>
 

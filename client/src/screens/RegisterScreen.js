@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { register } from '../actions/userActions'
 
+//react and redux hooks
 const RegisterScreen = ({ location, history }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -26,7 +27,7 @@ const RegisterScreen = ({ location, history }) => {
       history.push(redirect)
     }
   }, [history, userInfo, redirect])
-
+//using the hook to check if both passwords match on reigster
   const submitHandler = (e) => {
     e.preventDefault()
     if (password !== confirmPassword) {
@@ -35,7 +36,7 @@ const RegisterScreen = ({ location, history }) => {
       dispatch(register(name, email, password))
     }
   }
-
+//form controls for user fields
   return (
     <FormContainer>
       <h1>Sign Up</h1>
